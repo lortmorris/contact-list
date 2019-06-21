@@ -1,0 +1,12 @@
+{
+  "basePath": "/services",
+  "host": "api.domain.com",
+  "port": 5000,
+  "name": "universal-pattern-example",
+  "version": "0.1",
+  "connection": {
+    "mongodb": {
+      "uri": "mongodb://mongo.domain.com/contactlist"
+    },
+  }
+}

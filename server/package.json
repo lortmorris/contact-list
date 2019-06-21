@@ -1,0 +1,44 @@
+{
+  "name": "up-example",
+  "version": "1.0.0",
+  "description": "Contacts list challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js",
+    "watch": "DEBUG=up* ./node_modules/.bin/nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lortmorris/contact-list.git"
+  },
+  "keywords": [
+    "universal-pattern",
+    "contacts list",
+    "agent"
+  ],
+  "author": "César Casas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lortmorris/contact-list/issues"
+  },
+  "homepage": "https://github.com/lortmorris/contact-list#readme",
+  "dependencies": {
+    "config": "^3.1.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "mocha": "^6.1.4",
+    "mongojs": "^2.6.0",
+    "supertest": "^4.0.2",
+    "universal-pattern": "^1.0.19"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "nodemon": "^1.19.1"
+  }
+}

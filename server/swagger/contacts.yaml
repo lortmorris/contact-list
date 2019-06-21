@@ -1,0 +1,112 @@
+paths:
+  /contacts:
+    get:
+      tags:
+        - contacts
+      summary: contacts list
+      x-swagger-router-controller: universal.search
+      parameters:
+        - $ref: '#/parameters/q'
+        - $ref: '#/parameters/page'
+        - $ref: '#/parameters/sorting'
+        - $ref: '#/parameters/limit'
+        - $ref: '#/parameters/fields'
+
+      responses:
+        '200':
+          description: contacts list
+          schema:
+            $ref: '#/definitions/contact'
+    put:
+      tags:
+        - contacts
+      summary: insert new contact
+      x-swagger-router-controller: universal.insert
+      parameters:
+        - name: modeldata
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/contactInput'
+      responses:
+        '200':
+          description: contact added
+          schema:
+            $ref: '#/definitions/contact'
+
+    delete:
+      tags:
+        - contacts
+      summary: delete contact
+      x-swagger-router-controller: universal.remove
+      parameters:
+        - name: _id
+          in: query
+          required: true
+          type: string
+      responses:
+        '200':
+          description: deleted contact
+          schema:
+            $ref: '#/definitions/contact'
+
+    patch:
+      tags:
+        - contacts
+      summary: for updated contact document
+      x-swagger-router-controller: universal.update
+      parameters:
+        - name: modeldata
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/userUpdate'
+      responses:
+        '200':
+          description: updated user
+          schema:
+            $ref: '#/definitions/user'
+
+definitions:
+  contactInput:
+    type: object
+    properties:
+      name:
+        type: string
+        required: true
+      lastname:
+        type: string
+        required: true
+      email:
+        type: string
+        format: email
+        required: true
+      phone:
+        type: string
+        required: true
+
+  contactUpdate:
+    type: object
+    properties:
+      _id:
+        type: string
+        format: mongoId
+
+  contact:
+    type: object
+    properties:
+      _id:
+        type: string
+      name:
+        type: string
+        required: true
+      lastname:
+        type: string
+        required: true
+      email:
+        type: string
+        format: email
+        required: true
+      phone:
+        type: string
+        required: true

@@ -1,0 +1,43 @@
+$themes: (
+  default: (
+    colorBackground: white,
+    colorBackgroundBody: #f2f4f7,
+    colorText: #646777,
+  ),
+);
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+$color-accent: #4ce1b6;
+$color-accent-hover: darken($color-accent, 10%);
+$color-additional: #999999;
+$color-additional-hover: darken($color-additional, 10%);
+
+$color-yellow: #f6da6e;
+$color-yellow-hover: darken($color-yellow, 10%);
+
+$color-violet: #c88ffa;
+
+$color-red: #ff4861;
+$color-red-hover: darken($color-red, 10%);
+
+$color-blue: #70bbfd;
+$color-blue-hover: darken($color-blue, 10%);
+
+$color-gray: #787985;

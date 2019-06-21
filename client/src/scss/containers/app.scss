@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+$app-accent-color: #2c86a2;
+$app-gradient: linear-gradient(228deg, rgba(127, 244, 222, 0.95), rgba(56, 199, 225, 1));
+$app-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95), 5%), darken(rgba(56, 199, 225, 1), 5%));
+
+.app {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  z-index: 0;
+  overflow-x: hidden;
+
+  .container {
+    transition: 0.3s;
+  }
+
+  @media (min-width: 576px) {
+
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) {
+
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+
+    .container {
+      max-width: 1140px;
+    }
+  }
+}

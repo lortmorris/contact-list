@@ -1,8 +1,8 @@
 
 # Contact list project (server and frontend)
 
-[list]: https://github.com/lortmorris/contact-list/raw/master/screenshots/list.png "Contact list"
-[remove]: https://github.com/lortmorris/contact-list/raw/master/screenshots/remove.png "Removing contact"
+[list]: https://github.com/lortmorris/contact-list/blob/master/screenshots/list.png "Contact list"
+[remove]: https://github.com/lortmorris/contact-list/blob/master/screenshots/remove.png "Removing contact"
 
 ## Technical details.
 
